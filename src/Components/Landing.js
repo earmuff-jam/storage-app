@@ -1,38 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import raindrops from "../images/raindrops.jpg";
+import logo from "../images/logo.svg";
 
 const Landing = () => {
   return (
     <>
-      <StyledDiv>
-        <StyledTextDiv>
-          <StyledH1>Item Locator</StyledH1>
-          <StyledP>Find the items that you thought you lost ...</StyledP>
-        </StyledTextDiv>
-        <StyledImgDiv>
-          <img src={raindrops} alt="rain drops scattered on the screen" />
-        </StyledImgDiv>
-      </StyledDiv>
+      <Div>
+        <img src={logo} alt="rain drops scattered on the screen" />
+      </Div>
     </>
   );
 };
 
-export const StyledDiv = styled("div")({
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-evenly",
-});
-
-export const StyledTextDiv = styled("div")({
-  margin: "auto auto",
-});
-
-export const StyledImgDiv = styled("div")({
-  width: "30rem",
-  height: "22rem",
-  overflow: "hidden",
-  borderRadius: "2rem",
+export const Div = styled("div")({
+  justifyContent: "center",
+  textAlign: "center",
 });
 
 export const StyledH1 = styled("h1")({
