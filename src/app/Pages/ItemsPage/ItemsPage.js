@@ -1,5 +1,5 @@
 import { ThemeProvider, CssBaseline, Grid, Container } from "@mui/material";
-import Header from "../../../Components/Header/Header";
+import Header from "../../Components/Header/Header";
 import theme from "./theme";
 const ItemsPage = () => {
   console.log("wat");

@@ -1,8 +1,9 @@
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import Header from "../../../Components/Header/Header";
+import Header from "../../Components/Header/Header";
 import theme from "./theme";
+
+
 const LandingPage = () => {
-  console.log("wat");
   const sections = [
     { title: "All Items", url: "/items" },
     { title: "Containers", url: "/containers" },
