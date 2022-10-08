@@ -1,31 +1,56 @@
 import React from "react";
-import { ThemeProvider, CssBaseline, Button } from "@mui/material";
+import { ThemeProvider, CssBaseline, Button, Box } from "@mui/material";
+import { GraphUp } from "@styled-icons/bootstrap/GraphUp";
+import { History } from "@styled-icons/boxicons-regular/History";
+import { CalendarDay } from "styled-icons/bootstrap";
+import { MagnifyingGlass } from "@styled-icons/entypo/MagnifyingGlass";
 import Link from "@mui/material/Link";
 
 const Home = ({ theme }) => {
   const sections = [
-    { textLabel: "Generate report of critical items" },
-    { textLabel: "Discover your purchase journey" },
-    { textLabel: "Find items that were long lost" },
-    { textLabel: "Discover replinish lifecyles" },
+    { id: 1, textLabel: "Generate report of critical items", icon: GraphUp },
+    { id: 2, textLabel: "Discover your purchase journey", icon: History },
+    {
+      id: 3,
+      textLabel: "Find items that were long lost",
+      icon: MagnifyingGlass,
+    },
+    { id: 4, textLabel: "Discover replinish lifecyles", icon: CalendarDay },
   ];
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {sections.map((section) => (
-        <Link
-          color="inherit"
-          noWrap
-          underline="none"
-          key={section.textLabel}
-          variant="body2"
-          sx={{ p: 1, flexShrink: 0 }}
-        >
-          {section.textLabel}
-        </Link>
-      ))}
-
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+          padding: "1rem",
+        }}
+      >
+        {sections.map((section) => {
+          return (
+            <>
+              <Link
+                color="inherit"
+                noWrap
+                underline="none"
+                key={section.id}
+                variant="body2"
+                sx={{
+                  p: 1,
+                  flexShrink: 0,
+                  "& > svg": { marginRight: "1rem" },
+                }}
+              >
+                <section.icon size={"2rem"} />
+                {section.textLabel}
+              </Link>
+            </>
+          );
+        })}
+      </Box>
       <Button variant="outlined"> Discover </Button>
       <p>
         {" "}

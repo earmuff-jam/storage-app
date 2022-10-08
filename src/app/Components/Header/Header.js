@@ -1,18 +1,21 @@
 import * as React from "react";
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider, Container, CssBaseline } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "@mui/material/Link";
 
 function Header(props) {
-  const { sections, title, subtitle, theme } = props;
+  const { sections, title, subtitle, theme, logo } = props;
 
   return (
     <ThemeProvider theme={theme}>
-      <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="lg">
         <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-          {" "}
-          {title}
-          {subtitle}
+          <img src={logo} />
+          <div>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+          </div>
         </Toolbar>
         <Toolbar
           component="nav"
@@ -32,7 +35,7 @@ function Header(props) {
             </Link>
           ))}
         </Toolbar>
-      </React.Fragment>
+      </Container>
     </ThemeProvider>
   );
 }

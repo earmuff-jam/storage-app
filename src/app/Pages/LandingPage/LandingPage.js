@@ -1,7 +1,8 @@
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import Header from "../../Components/Header/Header";
 import Home from "../../Components/Home/Home";
 import theme from "./theme";
+import logo from "../../../images/logo.svg";
 
 const LandingPage = () => {
   const sections = [
@@ -17,12 +18,15 @@ const LandingPage = () => {
       <CssBaseline />
       <Header
         theme={theme}
+        logo={logo}
         title="Earmuff Jam"
         subtitle="Why our solutions resonate with you..."
         sections={sections}
       />
       <main>
-        <Home theme={theme}/>
+        <Container maxWidth="lg">
+          <Home theme={theme} />
+        </Container>
       </main>
     </ThemeProvider>
   );
