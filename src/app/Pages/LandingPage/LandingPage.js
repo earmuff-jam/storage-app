@@ -2,7 +2,6 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import Header from "../../Components/Header/Header";
 import theme from "./theme";
 
-
 const LandingPage = () => {
   const sections = [
     { title: "All Items", url: "/items" },
@@ -11,12 +10,14 @@ const LandingPage = () => {
     { title: "History", url: "/timeline" },
     { title: "Management", url: "/admin" },
   ];
+  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header
-        title="Item Locator"
-        subtitle="Find the items that you thought you lost ..."
+        theme={theme}
+        title="Earmuff Jam"
+        subtitle="Why our solutions resonate with you..."
         sections={sections}
       />
       <main>landing</main>
