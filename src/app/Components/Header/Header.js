@@ -1,9 +1,7 @@
 import * as React from "react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import styled from "styled-components";
 
 function Header(props) {
   const { sections, title, subtitle, theme } = props;

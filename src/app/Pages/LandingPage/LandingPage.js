@@ -1,5 +1,6 @@
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import Header from "../../Components/Header/Header";
+import Home from "../../Components/Home/Home";
 import theme from "./theme";
 
 const LandingPage = () => {
@@ -10,7 +11,7 @@ const LandingPage = () => {
     { title: "History", url: "/timeline" },
     { title: "Management", url: "/admin" },
   ];
-  console.log(theme);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -20,7 +21,9 @@ const LandingPage = () => {
         subtitle="Why our solutions resonate with you..."
         sections={sections}
       />
-      <main>landing</main>
+      <main>
+        <Home theme={theme}/>
+      </main>
     </ThemeProvider>
   );
 };
