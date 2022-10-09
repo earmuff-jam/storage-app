@@ -13,7 +13,7 @@ const Header = ({ sections, title, subtitle, theme, logo }) => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <img src={logo} />
+          <img src={logo} alt={"Logo of the company"}/>
           <div>
             <h1>{title}</h1>
             <p>{subtitle}</p>

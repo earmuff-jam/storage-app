@@ -12,7 +12,7 @@ import { CalendarDay } from "styled-icons/bootstrap";
 import { MagnifyingGlass } from "@styled-icons/entypo/MagnifyingGlass";
 import Link from "@mui/material/Link";
 
-const Home = ({ theme }) => {
+const Home = ({ theme, handleSignIn, handleSignUp }) => {
   const sections = [
     { id: 1, textLabel: "Generate report of critical items", icon: GraphUp },
     { id: 2, textLabel: "Discover your purchase journey", icon: History },
@@ -79,13 +79,15 @@ const Home = ({ theme }) => {
         >
           <Button
             variant="outlined"
+            onClick={() => handleSignUp(true)}
             // sx={{ transition: "background-color 0.3s ease-in-out" }}
           >
             Discover
           </Button>
           <p>
             {" "}
-            Already have an account <a href="#"> sign in </a>
+            Already have an account{" "}
+            <span onClick={handleSignIn}> Sign In </span>
           </p>
         </Box>
       </Box>

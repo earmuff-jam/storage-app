@@ -4,6 +4,8 @@ import {
 import ErrorPage from "./app/Pages/ErrorPage/ErrorPage";
 import ItemsPage from "./app/Pages/ItemsPage/ItemsPage";
 import LandingPage from "./app/Pages/LandingPage/LandingPage";
+import SignInPage from "./app/Pages/User/SignInPage";
+import SignUpPage from "./app/Pages/User/SignUpPage";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,16 @@ const router = createBrowserRouter([
   {
     path: "/items",
     element: <ItemsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signin",
+    element: <SignInPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignUpPage />,
     errorElement: <ErrorPage />,
   },
 ]);
