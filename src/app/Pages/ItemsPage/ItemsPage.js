@@ -1,6 +1,9 @@
-import { ThemeProvider, CssBaseline, Grid, Container } from "@mui/material";
+import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import Header from "../../Components/Header/Header";
+import logo from "../../../images/logo.svg";
 import theme from "./theme";
+
+
 const ItemsPage = () => {
   const sections = [
     { title: "All Items", url: "/items" },
@@ -14,8 +17,9 @@ const ItemsPage = () => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header
-          title="Item Locator"
-          subtitle="Find the items that you thought you lost ..."
+          theme={theme}
+          logo={logo}
+          title="Earmuff Jam"
           sections={sections}
         />
         <main>items</main>
