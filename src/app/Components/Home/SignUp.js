@@ -29,7 +29,7 @@ const useHandlePassword = () => {
   return [showPassword, handleShowPassword, password, handleSetPassword];
 };
 
-const SignIn = () => {
+const SignUp = () => {
   const [showPassword, handleShowPassword, password, handleSetPassword] =
     useHandlePassword();
 
@@ -51,7 +51,7 @@ const SignIn = () => {
           textAlign: "center",
         }}
       >
-        <Typography variant="h2"> Sign In </Typography>
+        <Typography variant="h2"> Sign Up </Typography>
         <Form>
           <FormControl
             sx={{ marginBottom: "1vh", width: "100%" }}
@@ -94,10 +94,10 @@ const SignIn = () => {
             />
           </FormControl>
         </Form>
-        <Button variant="standard"> Sign In</Button>
+        <Button variant="standard"> Continue </Button>
       </Container>
     </Container>
   );
 };
 
-export default SignIn;
+export default SignUp;
