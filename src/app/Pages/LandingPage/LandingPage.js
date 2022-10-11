@@ -7,7 +7,7 @@ import logo from "../../../images/logo.svg";
 import SignInPage from "../User/SignInPage";
 import SignUpPage from "../User/SignUpPage";
 import theme from "./theme";
-import {db} from "../../../config/firebase.js";
+import {db} from "../../../config/db";
 
 const useDisplayHome = () => {
   const [displayHome, setDisplayHome] = useState(true);
