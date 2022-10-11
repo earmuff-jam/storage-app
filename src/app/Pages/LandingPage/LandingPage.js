@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouteLoaderData } from "react-router-dom";
 import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import Header from "../../Components/Header/Header";
 import Home from "../../Components/Home/Home";
@@ -6,6 +7,7 @@ import logo from "../../../images/logo.svg";
 import SignInPage from "../User/SignInPage";
 import SignUpPage from "../User/SignUpPage";
 import theme from "./theme";
+import {db} from "../../../config/firebase.js";
 
 const useDisplayHome = () => {
   const [displayHome, setDisplayHome] = useState(true);
@@ -55,6 +57,10 @@ const LandingPage = () => {
     handleSignIn
   );
 
+  const albums = useRouteLoaderData("wat");
+  console.log(albums);
+
+  console.log(db);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
